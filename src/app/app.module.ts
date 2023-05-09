@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TituloComponent } from './components/titulo/titulo.component';
@@ -9,6 +8,8 @@ import { BarraNavegacaoComponent } from './components/barra-navegacao/barra-nave
 import { ConteudoComponent } from './components/conteudo/conteudo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/card/card.component';
+import {HttpClientModule} from '@angular/common/http';
+import { BuscaPokeApiComponent } from './components/busca-poke-api/busca-poke-api.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,18 @@ import { CardComponent } from './components/card/card.component';
     BarraNavegacaoComponent,
     ConteudoComponent,
     FooterComponent,
-    CardComponent
+    CardComponent,
+    BuscaPokeApiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

@@ -1,0 +1,10 @@
+<form class="row g-3">
+    <div class="col-auto">
+<input type="text" #input class="form-control" placeholder="Poke">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3" 
+        (click)="search(input.value); $event.preventDefault()">
+        Buscar</button>
+            </div>
+</form>
