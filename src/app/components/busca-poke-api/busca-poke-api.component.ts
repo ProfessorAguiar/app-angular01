@@ -6,6 +6,10 @@ import axios from 'axios';
   styleUrls: ['./busca-poke-api.component.css']
 })
 export class BuscaPokeApiComponent {
+  pokeName!:string
+  pokePeso!:string
+  pokeAlt!:string
+  pokeImg!:string
   search(value: string){
     const options={
       method: 'GET',
@@ -14,6 +18,10 @@ export class BuscaPokeApiComponent {
     }
     axios.request(options).then((response)=>{
       console.log(response.data)
+      this.pokeName=(response.data.name)
+      this.pokePeso=(`Peso: ${response.data.weight}`)
+      this.pokeAlt=(`Altura: ${response.data.height}`)
+      this.pokeImg=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${value}.gif`
     }).catch((error)=>{
       console.log(error)
     })

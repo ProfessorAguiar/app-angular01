@@ -1,10 +1,16 @@
 <form class="row g-3">
     <div class="col-auto">
-<input type="text" #input class="form-control" placeholder="Poke">
+        <input type="text" #input class="form-control" placeholder="Poke">
     </div>
     <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-3" 
-        (click)="search(input.value); $event.preventDefault()">
-        Buscar</button>
-            </div>
+        <button type="submit" class="btn btn-primary mb-3" (click)="search(input.value); $event.preventDefault()">
+            Buscar</button>
+    </div>
+    <div class="mostraPoke">
+        <img src={{pokeImg}} width="150"/>
+        <h4>{{pokeName}}</h4>
+        <p>{{pokePeso}}</p>
+        <p>{{pokeAlt}}</p>
+    </div>
+
 </form>
