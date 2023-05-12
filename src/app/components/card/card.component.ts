@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import axios from "axios";
 @Component({
   selector: 'app-card',
@@ -6,7 +6,12 @@ import axios from "axios";
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  titulo: string = 'Estudar Angular JS'
+  @Input() nomePoke:string=''
+  @Input() imgPoke:string=''
+  @Input() altPoke:string=''
+  @Input() pesoPoke:string=''
+  
+  
   search(value: string) {
     const options = {
       method: 'GET',
